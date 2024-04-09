@@ -20,7 +20,8 @@ pipeline {
                 // Install dependencies and build backend
                 dir('Backend') {
                     sh 'npm install'
-                    sh 'npm run build'
+                    sh 'npm audit fix'
+                    sh 'npm start'
                 }
             }
         }
