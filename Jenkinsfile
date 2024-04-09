@@ -37,15 +37,12 @@ pipeline {
 
         stage('Deploy') {
             when {
-                branch 'master'  // Deploy only on 'master' branch
+                branch 'main'  // Deploy only on 'master' branch
             }
             steps {
-                // This is where you would typically deploy the application
-                // For example, deploying to a server or platform like Render
+
                 echo 'Deploying to production...'
-                // Replace this echo with your deployment steps
-                // Example deployment to Render:
-                // sh 'render deploy --branch master'
+
             }
         }
     }
