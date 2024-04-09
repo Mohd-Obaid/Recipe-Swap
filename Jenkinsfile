@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                // Checkout code from the provided repository
-                git 'https://github.com/Mohd-Obaid/Recipe-Swap.git'
-            }
-        }
 
         stage('Build Frontend') {
             steps {
