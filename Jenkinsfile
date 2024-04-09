@@ -8,7 +8,9 @@ pipeline {
                 // Install dependencies and build frontend
                 dir('Frontend') {
                     sh 'npm install'
-                    sh 'npm run build'
+                    sh 'npm audit fix'
+                    sh 'npm start'
+
                 }
             }
         }
