@@ -9,7 +9,7 @@ pipeline {
                 dir('Frontend') {
                     sh 'npm install'
                     sh 'npm audit fix'
-                    sh 'npm start'
+                    sh 'npm run build'
 
                 }
             }
@@ -21,7 +21,7 @@ pipeline {
                 dir('Backend') {
                     sh 'npm install'
                     sh 'npm audit fix'
-                    sh 'npm start'
+                    sh 'npm run build'
                 }
             }
         }
