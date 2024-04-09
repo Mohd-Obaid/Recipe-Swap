@@ -6,7 +6,7 @@ pipeline {
         stage('Build Frontend') {
             steps {
                 // Install dependencies and build frontend
-                dir('frontend') {
+                dir('Frontend') {
                     sh 'npm install'
                     sh 'npm run build'
                 }
@@ -16,7 +16,7 @@ pipeline {
         stage('Build Backend') {
             steps {
                 // Install dependencies and build backend
-                dir('backend') {
+                dir('Backend') {
                     sh 'npm install'
                     sh 'npm run build'
                 }
@@ -26,10 +26,10 @@ pipeline {
         stage('Test') {
             steps {
                 // Run tests for frontend and backend
-                dir('frontend') {
+                dir('Frontend') {
                     sh 'npm test'
                 }
-                dir('backend') {
+                dir('Backend') {
                     sh 'npm test'
                 }
             }
